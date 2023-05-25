@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Select Demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!--- select2 --->
+    <!--- choices scripts --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
     <!-- Include Choices JavaScript (latest) -->
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-
+    <!--- choices scripts --->
 </head>
 <body>
 <h1 class="text-center">Multi-Select</h1>
@@ -20,6 +20,7 @@
     <div class="form-row">
         <div class=" mb-3">
             <div class="row">
+                <label for="select_id" class="col-sm-2 col-form-label">Select up to 3 skills</label>
                 <select name="select_id" class="form-control" id="select_id" required multiple>
                             <option value="1">Value 1</option>
                             <option value="2">Value 2</option>
@@ -34,11 +35,13 @@
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!--choices script-->
 <script>
     const choices = new Choices('#select_id', {
         removeItemButton: true,
         maxItemCount: 3,
     });
 </script>
+<!--choices script-->
 </body>
 </html>
