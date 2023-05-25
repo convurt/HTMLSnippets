@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!--- select2 --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <!-- Include Choices JavaScript (latest) -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+</head>
+<body>
+<h1 class="text-center">Multi-Select</h1>
+<div class="container">
+
+    <form method="post" action="" id="selectForm">
+    <!--- list --->
+    <div class="form-row">
+        <div class=" mb-3">
+            <div class="row">
+                <select name="select_id" class="form-control" id="select_id" required multiple>
+                            <option value="1">Value 1</option>
+                            <option value="2">Value 2</option>
+                            <option value="3">Value 3</option>
+                            <option value="4">Value 4</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!--- list  --->
+    </form>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+    const choices = new Choices('#select_id', {
+        removeItemButton: true,
+        maxItemCount: 3,
+    });
+</script>
+</body>
+</html>
